@@ -50,7 +50,7 @@ int solution(vector<int>& a) {
     zero_slices_num += 1;
     zero_slices_num = (zero_slices_num * zero_slices_num - zero_slices_num) / 2;
 
-    if (MAX_SLICES == (zero_cells_num + zero_slices_num + from_memo))
+    if (MAX_SLICES <= (zero_cells_num + zero_slices_num + from_memo))
         return -1;
 
     return zero_cells_num + zero_slices_num + from_memo;
